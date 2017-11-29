@@ -26,6 +26,11 @@ public class DefaultEchoService implements EchoService {
 
 	@Override
 	public String getMessage(String message) {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return String.format(this.echoFormat, message);
 	}
 

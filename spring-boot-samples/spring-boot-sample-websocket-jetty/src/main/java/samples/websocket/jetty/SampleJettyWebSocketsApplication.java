@@ -16,6 +16,7 @@
 
 package samples.websocket.jetty;
 
+import org.springframework.cache.annotation.EnableCaching;
 import samples.websocket.jetty.client.GreetingService;
 import samples.websocket.jetty.client.SimpleGreetingService;
 import samples.websocket.jetty.echo.DefaultEchoService;
@@ -40,6 +41,7 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 @Configuration
 @EnableAutoConfiguration
 @EnableWebSocket
+@EnableCaching
 public class SampleJettyWebSocketsApplication extends SpringBootServletInitializer
 		implements WebSocketConfigurer {
 

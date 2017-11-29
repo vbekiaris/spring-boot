@@ -16,8 +16,13 @@
 
 package samples.websocket.jetty.echo;
 
+import javax.cache.annotation.CacheDefaults;
+import javax.cache.annotation.CacheResult;
+
+@CacheDefaults(cacheName = "echoes")
 public interface EchoService {
 
+	@CacheResult
 	String getMessage(String message);
 
 }
